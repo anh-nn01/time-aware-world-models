@@ -526,7 +526,7 @@
 <section class="hero is-light is-small">
   <!-- Section title -->
   <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
-    Experiment: TASK: MW-Basketball
+    TASK: MW-Basketball
   </div>
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
@@ -791,7 +791,7 @@
 <section class="hero is-light is-small">
   <!-- Section title -->
   <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
-    Experiment: TASK: MW-Box-Close
+    TASK: MW-Box-Close
   </div>
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
@@ -1045,6 +1045,576 @@
     The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
     We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
   </div>
+</section>
+
+<!-- =============================
+      EXPERIMENT 4,5,6,7,8,9
+=============================-->
+<div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 2em;"></div>
+<section class="hero is-light is-small">
+  <!-- Section title -->
+  <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
+    Experiments on Additional Tasks
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
+    * the FPS is adjusted to highlight observation rate differences
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- ==============================
+              TESTED ON 1 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 1 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              TESTED ON 2.5 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 2.5 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              TESTED ON 10 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 10 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              TESTED ON 20 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 20 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              TESTED ON 30 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 30 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              TESTED ON 50 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
+              Inference Δt = 50 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <!-- <figure style="width: 45%; margin: 0 auto; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TAWM<br>(ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure> -->
+          
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em;">
+            <figcaption><strong>TASK: MW-Faucet-Open</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-faucet-open/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Hammer</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-hammer/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Handle-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-handle-pull/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Lever-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-lever-pull/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Pick-out-of-Hole</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-pick-out-of-hole/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+
+          <figure style="width: 90%; margin: 0 auto; font-size: 1.2em; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px; margin-bottom: 1em; margin-top: 1em;">
+            <figcaption><strong>TASK: MW-Stick-Pull</strong></figcaption>
+          </figure>
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-stick-pull/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
 </section>
 
 
