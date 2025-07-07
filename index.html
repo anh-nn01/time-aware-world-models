@@ -251,14 +251,18 @@
 </section>
 
 
-
+<section class="experiment">
+  <div class="container is-max-desktop" style="text-align: center;">
+    <h2 class="title is-3"><br>Experiments on Varying Observation Rates<br><br></h2> 
+  </div>
+</section>
 <!-- =============================
       EXPERIMENT 1
 =============================-->
 <section class="hero is-light is-small">
   <!-- Section title -->
   <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
-    Experiment: TASK: MW-Assembly
+    TASK: MW-Assembly
   </div>
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
@@ -270,9 +274,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 1 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 1 ms
             </div>
           </div>
@@ -309,9 +313,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 2.5 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 2.5 ms
             </div>
           </div>
@@ -348,9 +352,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 10 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 10 ms
             </div>
           </div>
@@ -387,9 +391,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 20 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 20 ms
             </div>
           </div>
@@ -426,9 +430,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 30 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 30 ms
             </div>
           </div>
@@ -465,9 +469,9 @@
         <!-- ==============================
               ASSEMBLY; TESTED ON 50 MS 
         =============================== -->
-        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 50 ms
             </div>
           </div>
@@ -507,7 +511,7 @@
   </div>
 
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
     TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
     The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
     We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
@@ -534,9 +538,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 1 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 1 ms
             </div>
           </div>
@@ -573,9 +577,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 2.5 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 2.5 ms
             </div>
           </div>
@@ -612,9 +616,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 10 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 10 ms
             </div>
           </div>
@@ -651,9 +655,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 20 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 20 ms
             </div>
           </div>
@@ -690,9 +694,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 30 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 30 ms
             </div>
           </div>
@@ -729,9 +733,9 @@
         <!-- ==============================
               BASKETBALL; TESTED ON 50 MS 
         =============================== -->
-        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 50 ms
             </div>
           </div>
@@ -771,7 +775,7 @@
   </div>
 
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
     TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
     The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
     We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
@@ -799,9 +803,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 1 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 1 ms
             </div>
           </div>
@@ -838,9 +842,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 2.5 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 2.5 ms
             </div>
           </div>
@@ -877,9 +881,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 10 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 10 ms
             </div>
           </div>
@@ -916,9 +920,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 20 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 20 ms
             </div>
           </div>
@@ -955,9 +959,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 30 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 30 ms
             </div>
           </div>
@@ -994,9 +998,9 @@
         <!-- ==============================
               BOX-CLOSE; TESTED ON 50 MS 
         =============================== -->
-        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
-            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold; background: white; border: 2px solid black; padding: 0.3em 0.5em; border-radius: 4px;">
               Inference Δt = 50 ms
             </div>
           </div>
@@ -1036,7 +1040,7 @@
   </div>
 
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
     TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
     The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
     We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
