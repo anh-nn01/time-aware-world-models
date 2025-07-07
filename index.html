@@ -182,7 +182,7 @@
 
 <section class="thumbnail">
   <div class="container is-max-desktop" style="text-align: center;">
-    <img src="./static/images/diagramv3.png" alt="Model Diagram" style="width:80%">
+    <img src="./static/images/diagramv3.png" alt="Model Diagram" style="width:100%">
   </div>
 </section>
 
@@ -251,7 +251,19 @@
 </section>
 
 
+
+<!-- =============================
+      EXPERIMENT 1
+=============================-->
 <section class="hero is-light is-small">
+  <!-- Section title -->
+  <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
+    Experiment: TASK: MW-Assembly
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
+    NOTE: the FPS is adjusted to highlight observation rate differences
+  </div>
+
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -259,7 +271,6 @@
               ASSEMBLY; TESTED ON 1 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 1 ms
@@ -299,7 +310,6 @@
               ASSEMBLY; TESTED ON 2.5 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 2.5 ms
@@ -339,7 +349,6 @@
               ASSEMBLY; TESTED ON 10 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 10 ms
@@ -379,8 +388,6 @@
               ASSEMBLY; TESTED ON 20 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
-
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 20 ms
@@ -420,7 +427,6 @@
               ASSEMBLY; TESTED ON 30 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 30 ms
@@ -460,7 +466,6 @@
               ASSEMBLY; TESTED ON 50 MS 
         =============================== -->
         <div class="assembly" style="display: flex; flex-wrap: wrap; text-align: center;">
-          <h5 class="title is-5">TASK: MW-Assembly</h5>
           <div style="width: 100%; text-align: center; margin-bottom: 1em;">
             <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
               Inference Δt = 50 ms
@@ -493,6 +498,520 @@
           </figure>
           <figure style="width: 45%;">
             <img src="./static/mw-videos/logs/mw-assembly/eval_dt=0.05/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================
+      EXPERIMENT 2
+=============================-->
+<div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 2em;"></div>
+<section class="hero is-light is-small">
+  <!-- Section title -->
+  <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
+    Experiment: TASK: MW-Basketball
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
+    NOTE: the FPS is adjusted to highlight observation rate differences
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- ==============================
+              BASKETBALL; TESTED ON 1 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 1 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.001/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.001/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.001/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BASKETBALL; TESTED ON 2.5 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 2.5 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.0025/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.0025/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.0025/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BASKETBALL; TESTED ON 10 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 10 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.01/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.01/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.01/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BASKETBALL; TESTED ON 20 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 20 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.02/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.02/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.02/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BASKETBALL; TESTED ON 30 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 30 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.03/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.03/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.03/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BASKETBALL; TESTED ON 50 MS 
+        =============================== -->
+        <div class="basketball" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 50 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.05/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.05/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-basketball/eval_dt=0.05/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================
+      EXPERIMENT 3
+=============================-->
+<div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 2em;"></div>
+<section class="hero is-light is-small">
+  <!-- Section title -->
+  <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 0em;">
+    Experiment: TASK: MW-Box-Close
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
+    NOTE: the FPS is adjusted to highlight observation rate differences
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 1 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 1 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.001/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.001/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.001/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.001/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.001/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 2.5 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 2.5 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.0025/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.0025/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.0025/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.0025/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.0025/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 10 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 10 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.01/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.01/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.01/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.01/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.01/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 20 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 20 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.02/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.02/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.02/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.02/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.02/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 30 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 30 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.03/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.03/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.03/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.03/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.03/baseline_traindt=0.05_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
+          </figure>
+        </div>
+        <!-- ==============================
+              BOX-CLOSE; TESTED ON 50 MS 
+        =============================== -->
+        <div class="box-close" style="display: flex; flex-wrap: wrap; text-align: center;">
+          <div style="width: 100%; text-align: center; margin-bottom: 1em;">
+            <div style="display: inline-block; font-size: 1.2em; font-weight: bold;">
+              Inference Δt = 50 ms
+            </div>
+          </div>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+          
+          <figure style="width: 45%; margin: 0 auto; text-align: center;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.05/tawm_log-uniform_euler_3.gif" style="width: 95%;">
+            <figcaption><strong>TAWM (ours)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.05/baseline_traindt=0.001_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 1 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.05/baseline_traindt=0.0025_3.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 2.5 ms)</strong></figcaption>
+          </figure>
+          <!-- linebreak -->
+          <div style="flex-basis: 100%; height: 1em;"></div>
+
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.05/baseline_traindt=0.01_2.gif" style="width: 95%;">
+            <figcaption><strong>Baseline<br>(training Δt = 10 ms)</strong></figcaption>
+          </figure>
+          <figure style="width: 45%;">
+            <img src="./static/mw-videos/logs/mw-box-close/eval_dt=0.05/baseline_traindt=0.05_2.gif" style="width: 95%;">
             <figcaption><strong>Baseline<br>(training Δt = 50 ms)</strong></figcaption>
           </figure>
         </div>
