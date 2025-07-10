@@ -113,11 +113,12 @@
             <span style="text-align: center; font-size: 1.25em; font-weight: bold; color: rgb(165, 7, 204); margin-bottom: 0em;">
               TL;DR:
             </span>
-            <span style="text-align: center; font-size: 1.25em; font-weight: bold; font-style: italic; color: rgb(71, 70, 71); margin-bottom: 0em;">
+            <span style="text-align: center; font-size: 1.25em; font-style: italic; color: rgb(71, 70, 71); margin-bottom: 0em;">
               Time-Aware World Model (TAWM) is a model-agnostic training method that improves dynamics learning by 
               explicitly incorporating time step size Δt and sampling observations at varying frequencies. 
               This addresses the real-world constraint of varying observation rates, enabling efficient learning 
               across temporal scales and outperforming fixed-Δt baselines under the same training budget.
+              <br><br>
             </span>
           </div>
 
@@ -202,6 +203,15 @@
   </div>
 </section>
 
+<section>
+  <div style="text-align: center; font-size: 1.2em; color: rgb(63, 63, 63); margin-bottom: 0em; width:50%; margin: 0 auto;">
+    <span>
+      TAWM explicitly incorporates time step size Δt into dynamics modeling (Time-Aware) and learns temporal dynamics at various scales 
+      by adaptively sampling Δt during training. Control actions are generated using Model Predictive Control (MPC), specifically the MPPI planner.
+    </span> <br><br>
+  </div>
+</section>
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -269,7 +279,7 @@
 
 <section class="experiment">
   <div class="container is-max-desktop" style="text-align: center;">
-    <h2 class="title is-3"><br>Experiments on Varying Observation Rates<br><br></h2> 
+    <h2 class="title is-3"><br>Experiments on Varying Observation/Control Frequencies<br><br></h2> 
   </div>
 </section>
 <!-- =============================
@@ -283,6 +293,15 @@
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
   </div>
+
+  
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 2em;"></div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
+    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
+    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
 
   <div class="hero-body">
     <div class="container">
@@ -525,13 +544,6 @@
       </div>
     </div>
   </div>
-
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
-    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
-    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
-    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
-  </div>
 </section>
 
 
@@ -547,6 +559,14 @@
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
   </div>
+
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 2em;"></div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
+    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
+    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
 
   <div class="hero-body">
     <div class="container">
@@ -789,13 +809,6 @@
       </div>
     </div>
   </div>
-
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
-    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
-    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
-    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
-  </div>
 </section>
 
 
@@ -812,6 +825,14 @@
   <div style="text-align: center; font-size: 1.2em; font-weight: bold; color: crimson; margin-bottom: 0em;">
     * the FPS is adjusted to highlight observation rate differences
   </div>
+
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 2em;"></div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 0em;">
+    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
+    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
+    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
+  </div>
+  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
 
   <div class="hero-body">
     <div class="container">
@@ -1053,13 +1074,6 @@
 
       </div>
     </div>
-  </div>
-
-  <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-bottom: 1em;"></div>
-  <div style="text-align: center; font-size: 1.0em; font-weight: bold; margin-bottom: 0em;">
-    TAWM successfully learn to solve the task across different inference Δt, without needing additional training samples nor training data. <br>
-    The non-time-aware models, even when trained specifically on Δt = 10 ms or Δt = 50 ms, fails to solve the tasks at low observation rates. <br> 
-    We hypothesize this is due to missing important transitions needed to learn the environment dynamics, leading to a collapse in world model learning.
   </div>
 </section>
 
